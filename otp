@@ -1,0 +1,14 @@
+import math,random
+#function to generate otp
+def generateOTP():
+ #declare a digits variable to store digits
+    digits="0123456789"
+    OTP=""
+ #Length of otp can be changed
+    for i in range(4):
+        OTP+=digits[math.floor(random.random()*10)]
+    return OTP
+    
+ #driver code   
+if __name__=="__main__":
+    print("Your 4 digit OTP is:",generateOTP())
